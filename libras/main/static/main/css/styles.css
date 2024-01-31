@@ -1,12 +1,35 @@
+:root{
+    --primarycolor: #13790720;
+    --secondcolor: ;
+    --linkcolor: ;
+    --transaparence: ;
+    --imagembackground: ;
+
+}
+
+
+
 .Logo{
     color: blue;
 }
 
 .centername{
-    color: red;
+    color: var(--primarycolor);
 }
 
 .header{
-    background-color: rebeccapurple;
+    background-color: #fafafa4e;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
 }
-
+.corpo{
+    margin: 0;
+    background-image: url('https://img.freepik.com/fotos-gratis/o-ceu-noturno-brilha-com-iridescente-ia-generativa-do-espaco-profundo_188544-11285.jpg?w=1060&t=st=1706732323~exp=1706732923~hmac=bbb93ea677b73aef55896fd24799530cbb2b839ca2be23f82eb4446076d75c4b');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
