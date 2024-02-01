@@ -69,5 +69,24 @@
     box-sizing: border-box; 
     width: 300px;
     height: 300px;
+    justify-content: center;
         
+}
+
+.imagemitem{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    
+}
+
+.titulodiv{
+    color: var(--primarycolor); /* ou color: initial; */
+    text-decoration: none; /* Remova sublinhado se desejar */
+}
+
+.imagemdiv{
+    align-items: center; 
 }
