@@ -1,6 +1,7 @@
 :root{
-    --primarycolor: #13790720;
-    --secondcolor: ;
+    --primarycolor: #85C026;
+    --secondcolor: #173981;
+    --backcolor: #FFFFE8;
     --linkcolor: ;
     --transaparence: ;
     --imagembackground: ;
@@ -11,6 +12,7 @@
 
 .Logo{
     color: blue;
+    align-content: center;
 }
 
 .centername{
@@ -18,18 +20,54 @@
 }
 
 .header{
-    background-color: #fafafa4e;
+    background-color: var(--primarycolor);
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: #fff;
+    height: 50px;
 }
 .corpo{
     margin: 0;
-    background-image: url('https://img.freepik.com/fotos-gratis/o-ceu-noturno-brilha-com-iridescente-ia-generativa-do-espaco-profundo_188544-11285.jpg?w=1060&t=st=1706732323~exp=1706732923~hmac=bbb93ea677b73aef55896fd24799530cbb2b839ca2be23f82eb4446076d75c4b');
+    background-color: var(--backcolor);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
+}
+
+.itensspace{    
+    width: 50rem;
+    height: 40rem;
+    padding: 5px;
+    border: 10px;
+    box-shadow: inset;
+    margin-top: 100px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    max-width: 50rem;
+    max-height: 40rem;
+    border: 1px solid #ddd; 
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.itensspace::-webkit-scrollbar {
+    width: 12px;
+}
+.itensspace::-webkit-scrollbar-thumb {
+    background-color: var(--secondcolor); /* Cor da alça da barra de rolagem */
+    border-radius: 6px;
+}
+
+.itens{
+    background-color: var(--backcolor);
+    border: 1px solid #ddd; 
+    margin-bottom: 10px;   
+    padding: 10px;         
+    box-sizing: border-box; 
+    width: 300px;
+    height: 300px;
+        
 }
