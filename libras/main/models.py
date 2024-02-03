@@ -1,7 +1,34 @@
 from django.db import models
 
-# Create your models here.
 class Cursos(models.Model):
-    nome = models.CharField(max_length=200) 
-    logocurso = models.BinaryField()#adicionar aqui o local do upload, sair do binario
-    descricao = models.CharField(max_length=400)
+    nome = models.CharField(max_length=200)
+    codigocurso = models.IntegerField()
+
+    @classmethod
+    def adicionar_curso(cls, nome, codigo):
+        novo_curso = cls(nome=nome, codigocurso=codigo)
+        novo_curso.save()
+
+    @classmethod
+    def excluir_curso(cls, codigo):
+        cls.objects.filter(codigocurso=codigo).delete()
+
+    def editar_nome_curso(self, novo_nome):
+        self.nome = novo_nome
+        self.save()
+
+
+class VideosCurso(models.Model):
+    codigocurso = models.IntegerField()
+    link = models.CharField(max_length=200)
+
+    @classmethod
+    def editar_video_curso(cls, codigo_curso, novo_link):
+        video_curso = cls.objects.get(codigocurso=codigo_curso)
+        video_curso.link = novo_link
+        video_curso.save()
+
+    @classmethod
+    def adicionar_video_curso(cls, codigo_curso, link):
+        novo_video = cls(codigocurso=codigo_curso, link=link)
+        novo_video.save()
