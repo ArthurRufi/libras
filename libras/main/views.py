@@ -12,7 +12,7 @@ def adicionar_curso(request):
         nome = request.POST.get('nome')
         codigo = int(request.POST.get('codigo'))
 
-        Cursos.adicionar_curso(nome=nome, codigo=codigo)
+        Cursos.adicionar_curso(nome=nome, codigo=codigo) 
         return HttpResponse("Curso adicionado com sucesso!")
 
     return render(request, 'sua_template.html')  # Substitua 'sua_template.html' pelo nome do seu template
