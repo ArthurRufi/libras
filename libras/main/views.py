@@ -17,9 +17,11 @@ def adicionar_curso(request):
 
     return render(request, 'sua_template.html')  # Substitua 'sua_template.html' pelo nome do seu template
 
+
 def excluir_curso(request, codigo_curso):
     Cursos.excluir_curso(codigo=codigo_curso)
     return HttpResponse("Curso excluído com sucesso!")
+
 
 def editar_nome_curso(request, codigo_curso):
     if request.method == 'POST':
