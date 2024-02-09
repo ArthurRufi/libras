@@ -13,6 +13,7 @@ class Cursos(models.Model):
     def excluir_curso(cls, codigo):
         cls.objects.filter(codigocurso=codigo).delete()
 
+    @classmethod
     def editar_nome_curso(self, novo_nome):
         self.nome = novo_nome
         self.save()
