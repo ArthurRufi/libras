@@ -21,10 +21,10 @@
             <div class="itens">
                 <a href="https://youtu.be/MleDDEg1qNc?t=3">
                     <div class="imagemdiv">
-                        <img class="imagemitem" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png" alt="bilola">
+                        <img class="imagemitem" src="{% static x.codigocurso|stringformat:'s' %}.jpg" alt="bilola">
                     </div>
                     <div class="titulodiv">
-                        {{x}} 
+                        {{x.nome}} 
                     </div>
                 </a>
             </div>

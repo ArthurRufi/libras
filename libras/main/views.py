@@ -4,7 +4,7 @@ from .models import Cursos, VideosCurso
 
 
 def n(request):
-    na= Cursos.objects.all()
+    na= Cursos.objects.values('nome', 'codigocurso')
     return render(request, 'main/html/index.html', {'nome': na})
 
 
