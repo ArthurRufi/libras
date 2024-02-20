@@ -9,4 +9,4 @@ app_name = 'apicursos'
 urlpatterns = [
     path('', apichamar, name='chamar')
 
-]
+] 

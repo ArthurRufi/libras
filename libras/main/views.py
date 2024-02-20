@@ -4,7 +4,8 @@ from .models import Cursos, VideosCurso
 
 
 def n(request):
-    return render(request, 'main/html/index.html')
+    na= Cursos.objects.all()
+    return render(request, 'main/html/index.html', {'nome': na})
 
 
 def adicionar_curso(request):
@@ -15,7 +16,7 @@ def adicionar_curso(request):
         Cursos.adicionar_curso(nome=nome, codigo=codigo) 
         return HttpResponse("Curso adicionado com sucesso!")
 
-    return render(request, 'sua_template.html')  # Substitua 'sua_template.html' pelo nome do seu template
+    return render(request, 'sua_template.html')  
 
 
 def excluir_curso(request, codigo_curso):
@@ -32,7 +33,7 @@ def editar_nome_curso(request, codigo_curso):
 
         return HttpResponse("Nome do curso editado com sucesso!")
 
-    return render(request, 'sua_template.html')  # Substitua 'sua_template.html' pelo nome do seu template
+    return render(request, 'sua_template.html') 
 
 def listar_cursos(request):
     cursos = Cursos.objects.all()

@@ -18,6 +18,10 @@ class Cursos(models.Model):
         self.nome = novo_nome
         self.save()
 
+    def __str__(self):
+        return f'{self.nome}'
+    
+        
 
 class VideosCurso(models.Model):
     codigocurso = models.IntegerField()

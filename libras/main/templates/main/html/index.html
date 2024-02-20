@@ -15,14 +15,16 @@
         <div class="Logo">Logo</div>
     </header>
     <section>
+       
         <div class="itensspace">
+            {% for x in nome %}
             <div class="itens">
                 <a href="https://youtu.be/MleDDEg1qNc?t=3">
                     <div class="imagemdiv">
                         <img class="imagemitem" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png" alt="bilola">
                     </div>
                     <div class="titulodiv">
-                        nome do curso
+                        {{x}} 
                     </div>
                 </a>
             </div>
@@ -31,7 +33,9 @@
                     
                 </a>
             </div>
+            {% endfor %}
         </div>
+        
     </section>
 </body>
 </html>
