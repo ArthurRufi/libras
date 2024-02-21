@@ -51,6 +51,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.itensspace :hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .itensspace::-webkit-scrollbar {
@@ -63,13 +71,16 @@
 
 .itens{
     background-color: var(--backcolor);
-    border: 1px solid #ddd; 
-    margin-bottom: 10px;   
+    border: 1px solid #000000; 
+    margin-bottom: 10px;
+    display: flex;   
     padding: 10px;         
     box-sizing: border-box; 
     width: 300px;
     height: 300px;
     justify-content: center;
+    text-decoration: none;
+    transition: none;
         
 }
 
@@ -79,14 +90,23 @@
     border-radius: 50%;
     object-fit: cover;
     border: 1px solid #ddd;
-    
+    box-shadow: none;
+    transition: none
 }
 
 .titulodiv{
     color: var(--primarycolor); /* ou color: initial; */
     text-decoration: none; /* Remova sublinhado se desejar */
+    align-self: center;
+    border: 5px;
+    text-align: center;
+    transition: none
 }
 
 .imagemdiv{
     align-items: center; 
+}
+
+.link{
+    text-decoration: none;
 }

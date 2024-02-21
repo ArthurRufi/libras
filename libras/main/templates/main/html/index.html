@@ -19,18 +19,13 @@
         <div class="itensspace">
             {% for x in nome %}
             <div class="itens">
-                <a href="https://youtu.be/MleDDEg1qNc?t=3">
+                <a class = 'link' href="https://youtu.be/MleDDEg1qNc?t=3">
                     <div class="imagemdiv">
-                        <img class="imagemitem" src="{% static x.codigocurso|stringformat:'s' %}.jpg" alt="bilola">
+                        <img class="imagemitem" src="{% static x.codigocurso|stringformat:'s' %}.jpg" alt="foto">
                     </div>
                     <div class="titulodiv">
                         {{x.nome}} 
                     </div>
-                </a>
-            </div>
-            <div>
-                <a href="https://youtu.be/MleDDEg1qNc?t=3">
-                    
                 </a>
             </div>
             {% endfor %}
