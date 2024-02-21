@@ -8,6 +8,16 @@ def n(request):
     return render(request, 'main/html/index.html', {'nome': na})
 
 
+def link(request, cod):
+    try:
+        redirection = VideosCurso.objects.get(codigocurso = cod)
+        cursoname = Cursos.objects.get(codigocurso = cod)
+        link_do_video = redirection.link  
+        return render(request, 'main/html/anjo.html', {'link_do_video': link_do_video, 'nome': cursoname})
+    
+    except redirection.DoesNotExist:
+        return HttpResponse('INNASNDN')
+
 def adicionar_curso(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')

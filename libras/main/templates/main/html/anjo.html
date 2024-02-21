@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>Libras</title>
+    <title>Document</title>
 </head>
 <body class='corpo'>
     <header class="header">
@@ -17,18 +17,10 @@
     <section>
        
         <div class="itensspace">
-            {% for x in nome %}
-            <div class="itens">
-                <a class = 'link' href="/link/{{x.codigocurso}}">
-                    <div class="imagemdiv">
-                        <img class="imagemitem" src="{% static x.codigocurso|stringformat:'s' %}.jpg" alt="foto">
-                    </div>
-                    <div class="titulodiv">
-                        {{x.nome}} 
-                    </div>
-                </a>
-            </div>
-            {% endfor %}
+            <a href="{{link_do_video}}">
+                {{nome}}
+
+            </a>
         </div>
         
     </section>
