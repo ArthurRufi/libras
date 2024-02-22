@@ -54,8 +54,7 @@
     text-decoration: none;
     transition: 1s;
 }
-
-.itensspace :hover{
+.itensspace :hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -79,11 +78,27 @@
     width: 300px;
     height: 300px;
     justify-content: center;
-    text-decoration: none;
-    transition: none;
+    transition: 0.5s;
         
 }
+.itens:hover .imagemitem {
+    box-shadow: none;
+    transform: none;
+}
 
+.itens:hover .titulodiv {
+    box-shadow: none;
+    transform: none;
+}
+.itens:hover .link {
+    box-shadow: none;
+    transform: none;
+}
+
+.itens:hover .imagemdiv {
+    box-shadow: none;
+    transform: none;
+}
 .imagemitem{
     width: 100px;
     height: 100px;
@@ -91,7 +106,8 @@
     object-fit: cover;
     border: 1px solid #ddd;
     box-shadow: none;
-    transition: none
+    transition: none;
+    transform: none;
 }
 
 .titulodiv{
@@ -100,7 +116,7 @@
     align-self: center;
     border: 5px;
     text-align: center;
-    transition: none
+    box-shadow: none;
 }
 
 .imagemdiv{
@@ -109,4 +125,6 @@
 
 .link{
     text-decoration: none;
+    transform: none;
+    box-shadow: none;
 }
