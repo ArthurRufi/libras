@@ -128,3 +128,9 @@
     transform: none;
     box-shadow: none;
 }
+
+.barrapesquisa{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
