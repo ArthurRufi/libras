@@ -20,15 +20,16 @@
 }
 
 .header{
-    background-color: var(--primarycolor);
     padding: 10px;
     display: flex;
     justify-content: space-between;
     height: 50px;
+    background-color: #635f5f3d;
 }
+
 .corpo{
     margin: 0;
-    background-color: var(--backcolor);
+    background: linear-gradient(to right, #02db47, #447fff);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -40,8 +41,9 @@
     padding: 5px;
     border: 10px;
     box-shadow: inset;
-    margin-top: 100px;
-    margin-left: 5px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
     flex-wrap: wrap;
     max-width: 50rem;
@@ -53,6 +55,7 @@
     justify-content: space-between;
     text-decoration: none;
     transition: 1s;
+    
 }
 .itensspace :hover {
     transform: scale(1.02);
@@ -69,7 +72,7 @@
 }
 
 .itens{
-    background-color: var(--backcolor);
+    background-color: rgba(10, 241, 122, 0.314);
     border: 1px solid #000000; 
     margin-bottom: 10px;
     display: flex;   
@@ -129,8 +132,29 @@
     box-shadow: none;
 }
 
-.barrapesquisa{
+.barrapesquisa {
+    display: flex; /* Para usar flexbox */
+    justify-content: center; /* Para centralizar horizontalmente */
+    align-items: center; /* Para centralizar verticalmente, se necessário */
+    width: 80%; /* Ajuste conforme necessário */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px; /* Ajuste conforme necessário */
+}
+
+.barrapesquisa input {
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 80%; /* Para preencher a largura da div */
+    padding: 8px; /* Ajuste conforme necessário */
+    box-sizing: border-box; /* Para incluir padding na largura total */
+    border: none;
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+.titulopre{
+    margin-top: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
