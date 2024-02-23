@@ -2,10 +2,14 @@
     --primarycolor: #85C026;
     --secondcolor: #173981;
     --backcolor: #FFFFE8;
+    --blackcolor: #000000;
+    --transparente: #48ffc800;
+    --semitransparente: #48ffc866;
     --linkcolor: ;
     --transaparence: ;
     --imagembackground: ;
-
+    --fontfamily: "Archivo Narrow", sans-serif;;
+    --fontsizebig: 30px;
 }
 
 
@@ -13,26 +17,30 @@
 .Logo{
     color: blue;
     align-content: center;
+
 }
 
 .centername{
-    color: var(--primarycolor);
+    color: var(--blackcolor);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsizebig);
 }
 
 .header{
-    padding: 10px;
+    background-color: var(--transparente);
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
     height: 50px;
-    background-color: #635f5f3d;
+    width: 100%;
+    border: 1px solid #000000;
+
 }
 
 .corpo{
-    margin: 0;
-    background: linear-gradient(to right, #02db47, #447fff);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background: linear-gradient(45deg, #02db47, #447fff);
+    background-size: 200% 200%;
+    
 }
 
 .itensspace{    
@@ -48,7 +56,7 @@
     flex-wrap: wrap;
     max-width: 50rem;
     max-height: 40rem;
-    border: 1px solid #ddd; 
+    border: 1px blur var(--semitransparente);
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
@@ -67,13 +75,12 @@
     width: 12px;
 }
 .itensspace::-webkit-scrollbar-thumb {
-    background-color: var(--secondcolor); /* Cor da alça da barra de rolagem */
+    background: linear-gradient(20deg, #02db476b, #17398180); /* Cor da alça da barra de rolagem */
     border-radius: 6px;
 }
 
 .itens{
-    background-color: rgba(10, 241, 122, 0.314);
-    border: 1px solid #000000; 
+    border: 1px solid var(--transparente); 
     margin-bottom: 10px;
     display: flex;   
     padding: 10px;         
@@ -107,19 +114,20 @@
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     box-shadow: none;
     transition: none;
     transform: none;
 }
 
 .titulodiv{
-    color: var(--primarycolor); /* ou color: initial; */
+    color: var(--blackcolor); /* ou color: initial; */
     text-decoration: none; /* Remova sublinhado se desejar */
     align-self: center;
     border: 5px;
     text-align: center;
     box-shadow: none;
+    font-family: var(--fontfamily);
 }
 
 .imagemdiv{
@@ -140,6 +148,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 10px; /* Ajuste conforme necessário */
+    margin-top: 50px;
 }
 
 .barrapesquisa input {
@@ -150,6 +159,13 @@
     box-sizing: border-box; /* Para incluir padding na largura total */
     border: none;
     outline: none; /* Remove a borda de foco padrão */
+    background-color: #85C026;
+    transition: 1s;
+    border-radius: 100px;
+}
+.barrapesquisa input:hover{
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .titulopre{
@@ -157,4 +173,6 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: var(--fontfamily);
+    font-size: var(--fontsizebig);
 }
