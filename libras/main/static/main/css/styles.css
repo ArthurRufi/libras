@@ -1,7 +1,10 @@
 :root{
-    --primarycolor: #85C026;
-    --secondcolor: #173981;
+    --primarycolor: #EBEBEB;
+    --secondcolor: #011752;
     --backcolor: #FFFFE8;
+    --bluesoftcolor: #ADDABE;
+    --greencolor: #24CE6B;
+    --yellowcolor: #FFC928;
     --blackcolor: #000000;
     --transparente: #48ffc800;
     --semitransparente: #48ffc866;
@@ -11,9 +14,15 @@
     --fontfamily: "Archivo Narrow", sans-serif;;
     --fontsizebig: 30px;
 }
-
-.Logo{
-    color: blue;
+.menulateral{
+    color: var(--bluesoftcolor);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsizebig);
+}
+.logo{
+    color: var(--bluesoftcolor);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsizebig);
 }
 
 .centername{
@@ -23,7 +32,7 @@
 }
 
 .header{
-    background-color: var(--transparente);
+    background-color: var(--secondcolor);
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
@@ -33,7 +42,7 @@
 }
 
 .corpo{
-    background: linear-gradient(45deg, #02db47, #447fff);
+    background: var(--primarycolor);
     background-size: 200% 200%;
     margin: 0px;
     
@@ -53,13 +62,14 @@
     flex-wrap: wrap;
     max-width: 50rem;
     max-height: 40rem;
-    border: 1px solid var(--blackcolor);
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     text-decoration: none;
     transition: 1s;
+    border-radius: 10%;
+    background-color: var(--bluesoftcolor);
 
     
     
@@ -68,7 +78,7 @@
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    background: linear-gradient(5deg, #6b5bff, #38f895);
+    background-color: var(--greencolor);
 }
 
 .itensspace::-webkit-scrollbar {
@@ -153,13 +163,13 @@
 
 .barrapesquisa input {
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px var(--backcolor);
     width: 80%; /* Para preencher a largura da div */
     padding: 8px; /* Ajuste conforme necessário */
     box-sizing: border-box; /* Para incluir padding na largura total */
     border: none;
     outline: none; /* Remove a borda de foco padrão */
-    background-color: #85C026;
+    background-color: var(--greencolor);
     transition: 1s;
     border-radius: 100px;
     border: 5px solid var(--secondcolor);
