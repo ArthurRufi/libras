@@ -1,0 +1,13 @@
+
+{% block  itensspace%}
+    <div class="itens">
+        <a class = 'link' href="/link/{{x.codigocurso}}">
+            <div class="imagemdiv">
+                <img class="imagemitem" src="{% static x.codigocurso|stringformat:'s' %}.png" alt="foto">
+            </div>
+            <div class="titulodiv">
+                {{x.nome}} 
+            </div>
+        </a>
+    </div>
+{% endblock  %}

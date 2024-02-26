@@ -16,17 +16,19 @@
 }
 .menulateral{
     color: var(--bluesoftcolor);
-    font-family: var(--fontfamily);
     font-size: var(--fontsizebig);
+    padding-left: 10px;
+    text-decoration: none;
 }
 .logo{
     color: var(--bluesoftcolor);
     font-family: var(--fontfamily);
     font-size: var(--fontsizebig);
+    padding-right: 10px;
 }
 
 .centername{
-    color: var(--blackcolor);
+    color: var(--bluesoftcolor);
     font-family: var(--fontfamily);
     font-size: var(--fontsizebig);
 }
@@ -98,7 +100,7 @@
     width: 30%;
     height: 30%;
     justify-content: center;
-    transition: 0.5s;
+    transition: 1s;
         
 }
 .itens:hover .imagemitem {
@@ -119,13 +121,13 @@
     box-shadow: none;
     transform: none;
 }
+
 .imagemitem{
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: none;
-    transition: none;
     transform: none;
 }
 
@@ -137,16 +139,18 @@
     text-align: center;
     box-shadow: none;
     font-family: var(--fontfamily);
+    transition: none;
+    transform: none;
 }
 
 .imagemdiv{
     align-items: center; 
+
 }
 
 .link{
     text-decoration: none;
-    transform: none;
-    box-shadow: none;
+
 }
 
 .barrapesquisa {
