@@ -12,13 +12,23 @@
     <header class="header">
         <a class="menulateral">Lateral</a>
         <div class="centername">{{nome}}</div>
-        <div class="logo">Logo</div>
+        <a href="/"><div class="logo">inicio</div></a>
     </header>
     <section>
        
         <div class="itensspace">
-            <a href="{{link_do_video}}">
-                {{nome}}
+            {% for s in sinal %}
+            <div class="itens">
+                <a class = 'link' href="/link/{{s.linkvideo}}">
+                    <div class="imagemdiv">
+                        <img class="imagemitem" src="{% static s.imagem|stringformat:'s' %}.png" alt="foto">
+                    </div>
+                    <div class="titulodiv">
+                        {{s.nome}} 
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
 
             </a>
         </div>
