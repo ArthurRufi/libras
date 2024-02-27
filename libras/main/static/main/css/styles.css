@@ -13,6 +13,7 @@
     --imagembackground: ;
     --fontfamily: "Archivo Narrow", sans-serif;;
     --fontsizebig: 30px;
+    --fontsizemid: 10px;
 }
 .menulateral{
     color: var(--bluesoftcolor);
@@ -150,6 +151,9 @@
 
 .link{
     text-decoration: none;
+    color: var(--bluesoftcolor);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsizebig);
 
 }
 
@@ -190,4 +194,20 @@
     margin-right: auto;
     font-family: var(--fontfamily);
     font-size: var(--fontsizebig);
+}
+
+.rodape{
+    background-color: var(--secondcolor);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border: 1px solid #000000;
+    position: relative;
+}
+
+.linkrodape{
+    color: var(--bluesoftcolor);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsizemid);
+    text-decoration: none;
 }
