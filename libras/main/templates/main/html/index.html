@@ -34,7 +34,7 @@
         <div class="itensspace">
             {% for x in nome %}
             <div class="itens">
-                <a class = 'link' href="/link/{{x.codigocurso}}">
+                <a class = 'link' href="/curso/{{x.codigocurso}}">
                     <div class="imagemdiv">
                         <img class="imagemitem" src="{% static x.codigocurso|stringformat:'s' %}.png" alt="foto">
                     </div>

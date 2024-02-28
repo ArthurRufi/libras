@@ -23,6 +23,7 @@
        
         <div class="itensspace">
             {% for s in sinal %}
+            {% if s.codigocurso == codigo %}
             <div class="itens">
                 <a class = 'link' href="/link/{{s.linkvideo}}">
                     <div class="imagemdiv">
@@ -33,6 +34,7 @@
                     </div>
                 </a>
             </div>
+            {% endif %}
             {% endfor %}
 
             </a>
