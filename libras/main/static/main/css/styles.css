@@ -52,8 +52,8 @@
 }
 
 .itensspace{    
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
     padding: 5px;
     border: 10px;
     box-shadow: inset;
@@ -63,8 +63,8 @@
     margin-right: auto;
     box-sizing: border-box;
     flex-wrap: wrap;
-    max-width: 50rem;
-    max-height: 40rem;
+    max-width: 80%;
+    max-height: 80%;
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
@@ -102,6 +102,7 @@
     height: 30%;
     justify-content: center;
     transition: 1s;
+    justify-items: center;
         
 }
 .itens:hover .imagemitem {
@@ -130,6 +131,7 @@
     object-fit: cover;
     box-shadow: none;
     transform: none;
+    align-items: center;
 }
 
 .titulodiv{
@@ -142,10 +144,12 @@
     font-family: var(--fontfamily);
     transition: none;
     transform: none;
+    justify-content: center;
 }
 
 .imagemdiv{
     align-items: center; 
+    justify-content: center;
 
 }
 

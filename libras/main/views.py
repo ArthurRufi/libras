@@ -52,3 +52,7 @@ def editar_nome_curso(request, codigo_curso):
 def listar_cursos(request):
     cursos = Cursos.objects.all()
     return render(request, 'listar_cursos.html', {'cursos': cursos})
+
+
+def tutotial(request):
+   return HttpResponse ('aui')
