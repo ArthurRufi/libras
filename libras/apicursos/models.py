@@ -10,3 +10,11 @@ class SinalsArchives(models.Model):
     descricaolibras = models.CharField(max_length= 1000)
     codigosinal = models.IntegerField(default=404)
     codigocurso = models.IntegerField(default=404)
+
+
+
+class Materia(models.Model):
+
+    nomemateria = models.CharField(max_length = 1000)
+    codigomateria = models.IntegerField()
+    codigocurso = models.IntegerField()
