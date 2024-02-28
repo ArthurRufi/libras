@@ -12,8 +12,8 @@
     --transaparence: ;
     --imagembackground: ;
     --fontfamily: "Archivo Narrow", sans-serif;;
-    --fontsizebig: 30px;
-    --fontsizemid: 10px;
+    --fontsizebig: 200%;
+    --fontsizemid: 80%
 }
 .menulateral{
     color: var(--bluesoftcolor);

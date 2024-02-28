@@ -8,3 +8,5 @@ class SinalsArchives(models.Model):
     linkvideo = models.CharField(max_length = 1000)
     descricaoptbr = models.CharField(max_length = 2000)
     descricaolibras = models.CharField(max_length= 1000)
+    codigosinal = models.IntegerField(default=404)
+    codigocurso = models.IntegerField(default=404)
