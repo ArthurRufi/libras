@@ -37,3 +37,6 @@ class VideosCurso(models.Model):
     def adicionar_video_curso(cls, codigo_curso, link):
         novo_video = cls(codigocurso=codigo_curso, link=link)
         novo_video.save()
+
+    def __str__(self):
+        return f'{self.nome}'

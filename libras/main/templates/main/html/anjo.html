@@ -10,51 +10,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <title>{{nome}} Sinais</title>
+    <title>{{ nome }} Sinais</title>
 </head>
 
-
 <body class='corpo'>
-
     <header class="header">
         <a class="menulateral">Lateral</a>
-        <div class="centername">{{nome}}</div>
+        <div class="centername">{{ nome }}</div>
         <a href="/"><i class="fas fa-home logo"></i></a>
     </header>
 
     <div>
         <form>
             <fieldset>
-              <legend>Escolha a materia</legend>
-              <p>
-                <input type="radio" name="size" id="size_1" value="small" />
-                <label for="size_1">Fundamentos</label>
-              </p>
+                <legend>Escolha o curso</legend>
+                {% for c in materia %}
+                    <p>
+                        <input type="checkbox" name="cursos_selecionados" id="{{ c.codigomateria }}" value="{{ c.codigomateria }}" />
+                        <label for="{{ c.codigomateria }}">{{ c.nomemateria }}</label>
+                    </p>
+                {% endfor %}
             </fieldset>
-          </form>
+        </form>
     </div>
 
     <section>
-       
         <div class="itensspace">
             {% for s in sinal %}
-            {% if s.codigocurso == codigo %}
-            <div class="itens">
-                <a class = 'link' href="/link/{{s.linkvideo}}">
-                    <div class="imagemdiv">
-                        <img class="imagemitem" src="{% static s.imagem|stringformat:'s' %}.png" alt="foto">
-                    </div>
-                    <div class="titulodiv">
-                        {{s.nome}} 
-                    </div>
-                </a>
-            </div>
-            {% endif %}
+                {% if cursos_selecionados %}
+                    {% for curso in cursos_selecionados %}
+                        {% if s.codigocurso == curso %}
+                            <div class="itens">
+                                <a class="link" href="/link/{{ s.linkvideo }}">
+                                    <div class="imagemdiv">
+                                        <img class="imagemitem" src="{% static s.imagem|stringformat:'s' %}.png" alt="foto">
+                                    </div>
+                                    <div class="titulodiv">
+                                        {{ s.nome }} 
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             {% endfor %}
-
-            </a>
         </div>
-        
     </section>
 </body>
 </html>

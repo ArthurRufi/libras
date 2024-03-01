@@ -6,8 +6,5 @@ from .models import SinalsArchives, Materia
 admin.site.register(Cursos)
 admin.site.register(VideosCurso)
 admin.site.register(SinalsArchives)
+admin.site.register(Materia)
 
-
-@admin.register(Materia)
-class MateriaAdmin(admin.ModelAdmin):
-    list_display = ('nomemateria', 'codigomateria', 'codigocurso')

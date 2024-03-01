@@ -10,7 +10,9 @@ class SinalsArchives(models.Model):
     descricaolibras = models.CharField(max_length= 1000)
     codigosinal = models.IntegerField(default=404)
     codigocurso = models.IntegerField(default=404)
-
+    codigodamateria = models.IntegerField(default = 0)
+    def __str__(self):
+        return f'{self.nome}'
 
 
 class Materia(models.Model):
@@ -18,3 +20,5 @@ class Materia(models.Model):
     nomemateria = models.CharField(max_length = 1000)
     codigomateria = models.IntegerField()
     codigocurso = models.IntegerField()
+    def __str__(self):
+        return f'{self.nomemateria}'

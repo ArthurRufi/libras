@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse
 from .models import Cursos, VideosCurso
-from apicursos.models import SinalsArchives
+from apicursos.models import SinalsArchives, Materia
 
 
 def n(request):
@@ -15,10 +15,11 @@ def link(request, cod):
         codigo = cod
         cursoname = Cursos.objects.get(codigocurso = cod)
         link_do_video = redirection.link
-        sinal = SinalsArchives.objects.values('nome', 'descricaolibras', 'descricaolibras', 'linkvideo', 'imagem', 'codigocurso')
+        sinal = SinalsArchives.objects.values('nome', 'descricaolibras', 'descricaolibras', 'linkvideo', 'imagem', 'codigocurso', 'codigodamateria')
+        materias = Materia.objects.values('nomemateria', 'codigomateria', 'codigocurso')
         
         
-        return render(request, 'main/html/anjo.html', {'link_do_video': link_do_video, 'nome': cursoname, 'sinal': sinal, 'codigo': codigo})
+        return render(request, 'main/html/anjo.html', {'link_do_video': link_do_video, 'nome': cursoname, 'sinal': sinal, 'codigo': codigo, 'materia': materias})
     
     except redirection.DoesNotExist:
         return HttpResponse('INNASNDN')
