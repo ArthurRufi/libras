@@ -39,4 +39,4 @@ class VideosCurso(models.Model):
         novo_video.save()
 
     def __str__(self):
-        return f'{self.nome}'
+        return f'{self.codigocurso}'

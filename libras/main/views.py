@@ -21,7 +21,7 @@ def link(request, cod):
         
         return render(request, 'main/html/anjo.html', {'link_do_video': link_do_video, 'nome': cursoname, 'sinal': sinal, 'codigo': codigo, 'materia': materias})
     
-    except redirection.DoesNotExist:
+    except (redirection.DoesNotExist, UnboundLocalError):
         return HttpResponse('INNASNDN')
 
 
@@ -29,7 +29,7 @@ def sinais(request, curso, sinal):
     try:
         redirection = SinalsArchives.objects.all()
         return render(request, 'main/html/details.html')
-    except redirection.DoesNotExist:
+    except (redirection.DoesNotExist):
         return HttpResponse('agua mineral')
 
 
