@@ -51,7 +51,7 @@
             {% for s in sinal %}
             {% if s.codigocurso == codigo%}
             <div class="itens">
-                <a class = 'link' href="/link/{{s.linkvideo}}">
+                <a class = 'link' href="/curso/{{s.codigocurso}}/{{s.nome}}/{{s.linkvideo}}">
                     <div class="imagemdiv">
                         <img class="imagemitem" src="{% static s.imagem|stringformat:'s' %}.png" alt="foto">
                     </div>

@@ -7,6 +7,6 @@ app_name = 'apicursos'
 
 
 urlpatterns = [
-    path('', apichamar, name='chamar')
+    path('apisearch/', apichamar, name='chamar')
 
 ] 

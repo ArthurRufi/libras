@@ -70,9 +70,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     text-decoration: none;
-    transition: 1s;
-    border-radius: 10%;
+    transition: 0.4s;
+    border-radius: 5%;
     background-color: var(--bluesoftcolor);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     
     
@@ -101,7 +102,7 @@
     width: 30%;
     height: 30%;
     justify-content: center;
-    transition: 1s;
+    transition: 0.4s;
     justify-items: center;
         
 }
@@ -132,6 +133,7 @@
     box-shadow: none;
     transform: none;
     align-items: center;
+    justify-content: center;
 }
 
 .titulodiv{
@@ -170,6 +172,7 @@
     margin-right: auto;
     padding: 10px; /* Ajuste conforme necessário */
     margin-top: 50px;
+    font-family: var(--fontfamily);
     
 }
 
