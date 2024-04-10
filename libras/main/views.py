@@ -27,10 +27,15 @@ def link(request, cod):
 
 def sinais(request, curso, sinal):
     try:
-        redirection = SinalsArchives.objects.all()
-        return render(request, 'main/html/details.html')
+        redirection = SinalsArchives.objects.values('nome', 'descricaolibras', 'descricaolibras', 'linkvideo', 'imagem', 'codigocurso', 'codigodamateria')
+        sinalref = SinalsArchives.objects.get(codigosinal = sinal)
+        return render(request, 'main/html/details.html', {'nome': sinalref.nome, 'descricaolibras': sinalref.descricaolibras, 'descricao': sinalref.descricaoptbr,
+                                                           'linkvideo': sinalref, 'imagem': sinalref.imagem, 'codigocurso': sinalref.codigocurso,
+                                                            'codigodamateria': sinalref.codigodamateria})
+        
     except (redirection.DoesNotExist):
         return HttpResponse('agua mineral')
+    
 
 
 def tutotial(request):
