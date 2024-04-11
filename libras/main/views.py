@@ -19,7 +19,7 @@ def link(request, cod):
         materias = Materia.objects.values('nomemateria', 'codigomateria', 'codigocurso')
         
         
-        return render(request, 'main/html/anjo.html', {'link_do_video': link_do_video, 'nome': cursoname, 'sinal': sinal, 'codigo': codigo, 'materia': materias})
+        return render(request, 'main/html/anjo.html', {'link_do_video': link_do_video, 'nome': cursoname, 'sinal': sinal, 'codigo': codigo, 'materia': materias,})
     
     except (redirection.DoesNotExist, UnboundLocalError):
         return HttpResponse('INNASNDN')

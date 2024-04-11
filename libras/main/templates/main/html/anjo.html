@@ -25,23 +25,24 @@
     <div>
         
         
-            <form>
-                <fieldset>
+            <form id="meuForm">
+                <fieldset id="meuFieldset">
                     
-                <legend>Escolha a materia</legend>
-                {% for m in materia %}
-                    {% if m.codigocurso == codigo %}
-                        <p>
-                            <input type="radio" name="size" id="size_1" value="small" />
-                            <label for="size_1">{{m.nomemateria}}</label>
-                        </p>
-                    
-                {% endif %} 
-               {% endfor %}
+                    <legend>Escolha a materia</legend>
+                    {% for m in materia %}
+                        {% if m.codigocurso == codigo %}
+                            <p>
+                                <input type="radio" name="size" id="size_1" value="{{codigomateria}}" />
+                                <label for="size_1">{{m.nomemateria}}</label>
+                            </p>
+                        
+                    {% endif %} 
+                {% endfor %}
                 
                 </fieldset>
 
             </form>
+            
         
     </div>
 
@@ -67,5 +68,6 @@
         </div>
         
     </section>
+    <script src="{% static "scripts.js" %}"></script>
 </body>
 </html>
