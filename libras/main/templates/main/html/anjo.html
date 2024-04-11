@@ -23,50 +23,39 @@
     </header>
 
     <div>
-        
-        
-            <form id="meuForm">
-                <fieldset id="meuFieldset">
-                    
-                    <legend>Escolha a materia</legend>
-                    {% for m in materia %}
-                        {% if m.codigocurso == codigo %}
-                            <p>
-                                <input type="radio" name="size" id="size_1" value="{{codigomateria}}" />
-                                <label for="size_1">{{m.nomemateria}}</label>
-                            </p>
-                        
-                    {% endif %} 
+        <form id="meuForm">
+            <fieldset id="meuFieldset">
+                <legend>Escolha a matéria</legend>
+                {% for m in materia %}
+                    {% if m.codigocurso == codigo %}
+                        <p>
+                            <input type="radio" name="materia" value="{{ m.codigomateria }}" id="materia_{{ forloop.counter }}">
+                            <label for="materia_{{ forloop.counter }}">{{ m.nomemateria }}</label>
+                        </p>
+                    {% endif %}
                 {% endfor %}
-                
-                </fieldset>
-
-            </form>
-            
-        
+            </fieldset>
+        </form>
+        <button id="limparFiltros">Limpar Filtros</button> 
     </div>
 
     <section>
-       
         <div class="itensspace">
             {% for s in sinal %}
-            {% if s.codigocurso == codigo%}
-            <div class="itens">
-                <a class = 'link' href="/curso/{{s.codigocurso}}/{{s.linkvideo}}">
-                    <div class="imagemdiv">
-                        <img class="imagemitem" src="{% static s.imagem|stringformat:'s' %}.png" alt="foto">
+                {% if s.codigocurso == codigo %}
+                    <div class="itens" data-codigodamateria="{{s.codigodamateria}}">
+                        <a class='link' href="/curso/{{ s.codigocurso }}/{{ s.linkvideo }}">
+                            <div class="imagemdiv">
+                                <img class="imagemitem" src="{% static s.imagem|stringformat:'s' %}.png" alt="foto">
+                            </div>
+                            <div class="titulodiv">
+                                {{ s.nome }} 
+                            </div>
+                        </a>
                     </div>
-                    <div class="titulodiv">
-                        {{s.nome}} 
-                    </div>
-                </a>
-            </div>
-            {% endif %}
+                {% endif %}
             {% endfor %}
-
-            </a>
         </div>
-        
     </section>
     <script src="{% static "scripts.js" %}"></script>
 </body>
