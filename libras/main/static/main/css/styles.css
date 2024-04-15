@@ -52,8 +52,8 @@
 }
 
 .itensspace{    
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
     padding: 5px;
     border: 10px;
     box-shadow: inset;
@@ -150,7 +150,7 @@
 }
 
 .imagemdiv{
-    align-items: center; 
+    position: relative; 
     justify-content: center;
 
 }
@@ -295,4 +295,26 @@
 .videolibras{
     width: 560px;
     height: 560px;
+}
+#meuForm .titulolegenda{
+    text-align: center;
+    margin-top: 80px;
+    
+}
+
+#meuFieldset{
+    border-radius: 50px;
+    border: 2px solid;
+    padding: 5px;
+}
+#meuForm {
+    margin-top: 30px;
+}
+.titulolegenda{
+    align-self: center;
+}
+#limparFiltros{
+    border-bottom: #140bcb solid;
+    margin-left: 47%;
+    margin-top: 5px;
 }

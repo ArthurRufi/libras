@@ -25,7 +25,7 @@
     <div>
         <form id="meuForm">
             <fieldset id="meuFieldset">
-                <legend>Escolha a matéria</legend>
+                <legend class ="titulolegenda">Escolha a matéria</legend>
                 {% for m in materia %}
                     {% if m.codigocurso == codigo %}
                         <p>
@@ -57,6 +57,7 @@
             {% endfor %}
         </div>
     </section>
+    
     <script src="{% static "scripts.js" %}"></script>
 </body>
 </html>

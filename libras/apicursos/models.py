@@ -12,6 +12,7 @@ class SinalsArchives(models.Model):
     codigosinal = models.IntegerField(default=404)
     codigocurso = models.IntegerField(default=404)
     codigodamateria = models.IntegerField(default = 0)
+    linkqrcode = models.TextField(default='lll')
     def __str__(self):
         return f'{self.nome}'
 
