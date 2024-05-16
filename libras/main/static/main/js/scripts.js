@@ -56,3 +56,5 @@ function limparFiltros() {
         item.style.display = 'block';
     });
 }
+
+

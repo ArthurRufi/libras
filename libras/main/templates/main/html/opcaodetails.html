@@ -29,7 +29,28 @@
             <div onclick="mostrarInformacao(this)"><a class="link" href="/curso/{{cursolink}}/{{linksinal}}/tabdescritivo">sinal descritivo</a></div>
             <div onclick="mostrarInformacao(this)"> <a class="link" href="/curso/{{cursolink}}/{{linksinal}}/tabsinal">Sinal</a></div>
         </header>
-        
+    {% if opcao == 'descricao'%}
+        <div class = "opcaodetails">
+            <div class = "detailsdescritpt">
+                <div class="textdescript">
+                    <p>{{descricaolibras}}</p>
+                </div>
+            </div>
+        </div> 
+    {% elif opcao == 'tabdescritivo'%}
+        <div class = "opcaodetails">
+            <div class = "detailsdescritpt">
+                <div class="videodescritivo">
+                </div>
+            </div>        
+        </div>
+    {% elif opcao == 'tabsinal'%}
+        <div class = "opcaodetails">
+            <div class = "detailsdescritpt">
+                <div class = "videosinal"> </div>
+            </div>
+        </div>
+    {% endif %}   
     </div>
     <script src="{% static 'script.js' %}"></script>
 </body>

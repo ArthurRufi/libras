@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import n, link, tutotial, sinais
+from .views import n, link, tutotial, sinais, opcaodetails
 
 
 
@@ -13,4 +13,5 @@ urlpatterns = [
     path('curso/<int:cod>', link, name='linkreturn'),
     path('tutorial/', tutotial, name = 'tutorial'),
     path('curso/<int:curso>/<int:sinal>', sinais),
+    path('curso/<int:curso>/<int:sinal>/<str:opcao>', opcaodetails, name='linkreturn'),
 ]
